@@ -1,12 +1,7 @@
 from unittest import IsolatedAsyncioTestCase
 
 from slardar.utils import map_and_gather
-
-
-async def simple_func(num: int) -> str:
-    sequence = 'elephant_liu'
-
-    return sequence[num % len(sequence)]
+from .utils import simple_func
 
 
 class TestMap(IsolatedAsyncioTestCase):
@@ -16,4 +11,4 @@ class TestMap(IsolatedAsyncioTestCase):
             [3, 6, 9]
         )
 
-        self.assertEqual(r, ['p', 'n', 'l'])
+        self.assertEqual(r, ['p', 'n', 'L'])
